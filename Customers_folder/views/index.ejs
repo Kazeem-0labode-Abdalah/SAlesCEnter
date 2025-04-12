@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 80px;
+    margin-bottom: 75px;
+    padding: 0px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(218, 159, 13, 0.349);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.header_inner_div_1{
+    margin-top: 2px;
+    height: 100%;
+    display: inline-block;
+    
+
+}
+.header_inner_div_2{
+    margin-top: 2px;
+    height: 100%;
+    display: inline-block;
+}
+.header_inner_span_1{
+    font-size: 25px;
+    font-family: monospace;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.header_inner_span_2{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+    text-align: center;
+     display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.header_inner_span_3{
+    font-size: 30px;
+    font-family: monospace;
+    margin-top: 30px;
+    text-align: center;
+     display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+.header_inner_div_3{
+    position: relative;
+    vertical-align: middle;
+    margin: 15px;
+
+}
+.header_inner_div_3_image{
+    padding-top: 4px;
+    width: 70px;
+}
+
+.header_inner_div_3_inner_div{
+    position: absolute;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    font-family: monospace sans-serif;
+    text-align: center;
+}
+
+.products_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    vertical-align: top;
+    padding-top: 13px;
+    
+}
+
+
+.product_image{
+    width: 240px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.product_div{
+    width: 300px;
+    margin-right:0px ;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 2px solid rgb(245, 216, 164);
+    border-radius: 20px;
+    padding: 5px;
+    
+   
+}
+
+.product_inner_div{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+
+.product_name{
+    text-align: center;
+    margin: 0px;
+    font-size: 30px;
+    word-wrap: break-word;
+    font-family: monospace;
+}
+
+.product_price{
+    text-align: center;
+    margin: 0px;
+    font-size: 30px;
+    word-wrap: break-word;
+    
+}
+
+.product_inner_div_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+}
+
+.product_increment_button{
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.product_increment_button:hover{
+    background-color: rgb(245, 216, 164);
+}
+
+.selected_product_amount{
+
+    font-size: 25px;
+    padding: 10px;
+
+}
+.product_decrement_button{
+    height: 40px;
+    width: 40px;
+    font-size: 27px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.product_decrement_button:hover{
+    background-color: rgb(245, 216, 164);
+}
+.Add_to_cart_button{
+    text-align: center;
+    font-size:30px;
+    margin: 0px;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.Add_to_cart_button:hover{
+    background-color: rgb(245, 216, 164);
+}
+
+.bottom_div{
+    background-color: black;
+    position: fixed;
+    height: 75px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bottom_div button:hover{
+    background-color:  rgb(245, 216, 164);
+}
+
+.bottom_div_inner_button_1{
+    flex: 1;
+    width: 100%;   
+    cursor: pointer;
+    transition: 0.5s;
+    border-width: 3px;
+}
+
+
+.bottom_div_inner_button_2{
+    flex: 1;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    border-width: 3px;
+}
+
+.bottom_div_inner_button_3{
+    flex: 1;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    border-width: 3px;
+}
+
+
+.bottom_div_inner_button_1_inner_div{
+  height: 100%;
+}
+
+.xy{
+    width: 45px;
+    
+}
+
+.xyz{
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    font-family: monospace Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.bottom_div_inner_button_2_inner_div{
+    height: 100%;
+    
+}
+
+.ab{
+    font-size: 20px ;
+    font-family: monospace Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+    color: orange;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.abc{
+    font-size: 20px ;
+    font-family: monospace Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    font-weight: 800;
+
+}
+
+.sidebar{
+    position: fixed;
+    background-color: white;
+    width: 50%;
+    top: 0px;
+    left: 0px;
+    bottom:75px ;
+    display: none;
+}
+
+.sidebar_inner_div_1{
+    width: 100%;
+    height: 80%;
+}
+
+.sidebar_inner_div_2{
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar_inner_div_2_inner_button_1{
+    flex: 1;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.7s;
+    border-width: 2px;
+}
+
+.sidebar_inner_div_2_inner_button_1:hover{
+    background-color: rgb(245, 216, 164) ;
+}
+
+
+.sidebar_inner_div_2_inner_button_2{
+    flex: 1;
+    width: 100%;
+    cursor: pointer;
+     border-width: 2px;
+}
+
+.sidebar_inner_div_2_inner_button_2:hover{
+    background-color: rgb(245, 216, 164) ;
+}
+
+.sidebar_inner_div_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.sidebar_inner_div_1_inner_divs{
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    visibility: visible;
+       
+}
+.A{
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 5%;
+    font-family: monospace;
+}
+
+.B{
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;  
+    font-family: monospace;
+}
+.C{
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: monospace;
+}
+.D{
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 15px;
+    margin-left: 3px;
+    margin-right: 0px;
+    flex: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+.naira_sign_span{
+    color: orange;
+}
+
+.span{
+    font-size: 20px;
+    font-weight: 500px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 0px;
+}
+#form_for_delivery_information_outer_div{
+    border-radius: 25px;
+    background-color: rgba(218, 159, 13, 0.349);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 30px;
+    display: none;
+}
+
+#form_for_delivery_information{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#form_for_delivery_information div{
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    color: black;
+    margin: 20px;
+    font-weight: 700;
+}
+
+#form_for_delivery_information input{
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid orange;
+    cursor: pointer;
+
+}
+
+#form_for_delivery_information button{
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid orange;
+    cursor: pointer;
+}
+
+#form_for_delivery_information_outer_div_inner_div label{
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#form_for_delivery_information_inner_p{
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+#span{
+    font-family: monospace;
+    font-size: 30px;
+    color: black;
+    
+}
+#Continue_shopping{
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid orange;
+    margin-top: 0px;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+#form_for_delivery_information_outer_div_inner_div{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    background-color: orange;
+    display: none;
+   overflow: auto;
+}
+.price_and_currency{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:0px ;
+
+}
+.naira_div{
+    font-family: monospace;
+    font-size: 27px;
+    margin-right: 3px;
+}
+
+.naira_div2{
+    font-family: monospace;
+    font-size: 24px;
+    color: orange;
+    margin-right: 3px;
+    font-weight: 900;
+}
+
+.Store_owner_id{
+    display: none;
+}
+
+.Store_name{
+    background-color: white;
+    text-align: center;
+    margin:3px;
+    font-size: 30px;
+    word-wrap: break-word;
+    font-family: monospace;
+    border: none;
+    transition: 0.4s;
+}
+.Store_name:hover{
+    background-color:orange ;
+    border: 1px solid orange;
+    border-radius: 10px;
+    font-size: 32px;
+}
+
+#all_stores{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    position: fixed;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 30px;
+    overflow: auto;
+    height: 30%;
+     display: none; 
+}
+
+.Close_Store_Profile{
+    position: absolute;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    font-family: monospace sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+
+.Store_link{
+    width: 100%;
+    cursor: pointer;
+    font-family: monospace sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.Store_link:hover{
+    background-color:  rgb(245, 216, 164);
+}
+.all_store_header{
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace sans-serif;
+    font-weight: 500;
+
+}
+.Store_link_id{
+    width: 100%;
+    cursor: pointer;
+    font-family: monospace sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+@media (max-width:950px){
+    #all_stores{
+        width: 60%;
+    }
+
+}
+
+@media (max-width :850px){
+    .sidebar{
+        width: 100%;
+    }
+    #all_stores{
+        width: 70%;
+    }
+
+}
+
+@media (max-width :700px){
+    .products_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width :680px){
+    .header{
+       justify-content: space-around;       
+    }
+    .products_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width :500px){
+    .header_inner_div_1{
+       display: none;
+    }
+
+.header_inner_div_2{
+    font-family:700px ;
+}
+.products_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="header_inner_div_1"><span class="header_inner_span_1">Hii</span> <span class="header_inner_span_2"><%=customer_information.customer_first_name%></span></div>
+
+            <div class="header_inner_div_2"><span class="header_inner_span_3">SAlesCEnter.</span></div>
+
+            <div class="header_inner_div_3">
+                <img src="trolley.png" alt="A cart image" class="header_inner_div_3_image">
+                <div class="header_inner_div_3_inner_div">0</div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="products_div">
+            <%for(let i = 0; i < product_info_holder.length ; i++){%>
+        <div class="product_div">
+            <div class="Store_owner_id"><%=product_info_holder[i][2]%></div>
+            <div class="Store_name"><%=product_info_holder[i][3]%></div>
+
+            <div>
+                <!-- <img src="trolley.png" alt="a shirt image" class="product_image"> -->
+                <img src="data:image/jpeg;base64,<%=product_image_holder[i]%>" alt="A product's image" class="shirt_image">
+            </div>
+   
+            <div class="product_inner_div">
+
+            <div class="product_name"><%=product_info_holder[i][0]%></div>
+           <div class="price_and_currency"><div class="naira_div">#</div> <div class="product_price"><%=product_info_holder[i][1]%></div></div>
+            <div class="product_inner_div_2">
+                <button class="product_increment_button">+</button>
+                <div class="selected_product_amount">0</div>
+                <button class="product_decrement_button">-</button>
+               
+            </div>
+            <button class="Add_to_cart_button">Add to cart</button>
+            
+        </div>
+        </div>
+        <%}%>
+        </div>
+
+
+
+            <div class="bottom_div">
+                <button class="bottom_div_inner_button_1">
+                        <p class="xyz">View cart</p>
+                </button>
+
+                <button class="bottom_div_inner_button_3">
+                    <p class="abc">View ALL stores</p>
+                </button>
+
+                <button class="bottom_div_inner_button_2">
+                    <div class="bottom_div_inner_button_2_inner_div">
+                          <div class="price_and_currency"><div class="naira_div2">#</div> <p class="ab">0</p></div>
+                        <p class="xyz">Place Order</p>
+                    </div>
+                </button>
+
+               
+            </div>
+            
+
+
+    <div class="sidebar">
+       <div class="sidebar_inner_div_1">
+             
+        </div>
+       
+      
+       <div class="sidebar_inner_div_2">
+
+            <button class="sidebar_inner_div_2_inner_button_1">
+                    <p class="xyz">Continue Shopping</p>
+            </button>
+            
+            <button class="sidebar_inner_div_2_inner_button_2">
+                <div class="sidebar_inner_div_2_inner_button_2_inner_div">
+                      <div class="price_and_currency"><div class="naira_div2">#</div> <p class="ab">0</p></div>
+                    <p class="abc">Place Order</p>
+                </div>
+            </button>
+       </div>
+    </div>
+
+    <form action="send_order" method="post" id="send_order_form"></form>
+
+    <div id="form_for_delivery_information_outer_div">
+    <form id="form_for_delivery_information" action="place_order" method="post">  
+        <div class="delivery_info">Information For delivery</div>
+        <input type="hidden" name="customer_name" id="customer_name" value="<%=customer_information.customer_full_name%>">
+        <input type="hidden" value="<%=customer_information.customer_first_name%>" name="customer_first_name" id="customer_first_name">
+        <input type="hidden" value="<%=customer_information.customer_last_name%>" name="customer_last_name" id="customer_first_name">
+        <input type="hidden" value="<%=customer_information.customer_email%>" name="customer_email">
+        <input type="hidden" value="<%=customer_information.customer_phone_number%>" name="customer_tel_number">
+        <input placeholder="Select your location within OGITECH" required  id="location_button" name="customer_location" >
+         <input type="submit" value="Place order" id="place_order">     
+        <p id="form_for_delivery_information_inner_p">Or</p>
+        <div id="form_for_delivery_information_outer_div_inner_div">
+        <div><label for="" class="label">Health Care building</label> <input type="checkbox" name="Health Care building" class="checkbox" value="Health Care  building"></div>
+        <div><label for="" class="label">Convocation Hall</label> <input type="checkbox" name="Convocation Hall" class="checkbox" value="Convocation Hall"></div>
+        <div><label for="" class="label">Twin Hall A</label> <input type="checkbox" name="Twin Hall A" class="checkbox" value="Twin Hall A"></div>
+        <div><label for="" class="label">Twin Hall B</label> <input type="checkbox" name="Twin Hall B" class="checkbox" value="Twin Hall B"></div>
+        <div><label for="" class="label">ICT</label> <input type="checkbox" name="ICT" class="checkbox" value="ICT"></div>
+        <div><label for="" class="label">Computer Science department</label> <input type="checkbox" name="Computer Science department" class="checkbox" value="Computer Science department"></div>
+        <div><label for="" class="label">Bookshop</label> <input type="checkbox" name="Bookshop" class="checkbox" value="Bookshop"></div>
+        <div><label for="" class="label">Library</label> <input type="checkbox" name="Library" class="checkbox" value="Library"></div>
+        <div><label for="" class="label">Building technology department</label> <input type="checkbox" name="Building technology department" class="checkbox" value="Building technology department"></div>
+        <div><label for="" class="label">Architecture department</label> <input type="checkbox" name="Architecture department" class="checkbox" value="Architecture department"></div>
+        <div><label for="" class="label">Ogitech church</label> <input type="checkbox" name="Ogitech church" class="checkbox" value="Ogitech church"></div>
+        <div><label for="" class="label">Ogitech mosque</label> <input type="checkbox" name="Ogitech mosque" class="checkbox" value="Ogitech mosque"></div>
+        <div><label for="" class="label">Cafeteria enviroment</label> <input type="checkbox" name="Cafeteria enviroment" class="checkbox" value="Cafeteria enviroment"></div>
+        <div><label for="" class="label">Football field</label> <input type="checkbox" name="Football field" class="checkbox" value="Football field"></div>
+        <div><label for="" class="label">RIT hall building</label> <input type="checkbox" name="RIT hall building" class="checkbox" value="RIT building"></div>
+        <div><label for="" class="label">School of part time studies</label> <input type="checkbox" name="School of part time studies" class="checkbox" value="School of part time studies"></div>
+        <div><label for="" class="label">Mechanical engineering building</label> <input type="checkbox" name="Mechanical engineering building" class="checkbox" value="Mechanical engineering building"></div>
+        <div><label for="" class="label">Electrical engineering building</label> <input type="checkbox" name="Electrical engineering building" class="checkbox" value="Electrical engineering building"></div>
+        <div><label for="" class="label">Access Bank</label> <input type="checkbox" name="Access Bank" class="checkbox" value="Access Bank"></div>
+        <div><label for="" class="label">Old Architecture building</label> <input type="checkbox" name="Old Architecture building" class="checkbox" value="Old Architecture building"></div>
+        <div><label for="" class="label">Admission Block</label> <input type="checkbox" name="Admission block" class="checkbox" value="Admission block"></div>
+        <div><label for="" class="label">SBMS</label> <input type="checkbox" name="SBMS" class="checkbox" value="SBMS"></div>
+        <div><label for="" class="label">Building Tech department</label> <input type="checkbox" name="Building Tech department" class="checkbox" value="Building Tech department"></div>
+    </div>
+    </form> 
+    <button type="button" id="Continue_shopping"> Continue Shopping </button>
+</div>
+
+<div id="all_stores">
+    <button class="Close_Store_Profile">X</button>
+    <form action="/Store_Profile" method="post">
+        <div class="all_store_header">Click on a store</div>
+      <%  for(let i = 0; i < Store_name_and_Store_id_holder.length; i++){%>
+             <input  type="submit" class="Store_link" value="<%=Store_name_and_Store_id_holder[i][1]%>" name="Store_name">   
+     <% }%>
+    </form>
+</div>
+
+    <script >
+const product_increment_button = document.getElementsByClassName("product_increment_button");
+const product_decrement_button = document.getElementsByClassName("product_decrement_button");
+const selected_product_amount_div = document.getElementsByClassName("selected_product_amount");
+const amount_of_cart_items = document.getElementsByClassName("header_inner_div_3_inner_div");
+const add_to_cart_buttons = document.getElementsByClassName("Add_to_cart_button");
+const product_price = document.getElementsByClassName("product_price")
+const product_name = document.getElementsByClassName("product_name")
+const xyz_buttons = document.getElementsByClassName("xyz") 
+const ab = document.getElementsByClassName("ab");
+const sidebar = document.getElementsByClassName("sidebar")
+const A = document.getElementsByClassName("A")
+const B = document.getElementsByClassName("B")
+const C = document.getElementsByClassName("C")
+let myArray = new Array(100);
+const sidebar_inner_div_1_inner_divs = document.getElementsByClassName("sidebar_inner_div_1_inner_divs")
+const sidebar_inner_div_1 = document.getElementsByClassName("sidebar_inner_div_1")
+const body = document.getElementsByTagName("body");
+let remove_from_sidebar_button = new Array()
+let holder;
+const products_div = document.getElementsByClassName("products_div")
+const location_button = document.getElementById("location_button")
+const location_list = document.getElementById("form_for_delivery_information_outer_div_inner_div")
+const label = document.getElementsByClassName("label")
+const checkbox = document.getElementsByClassName("checkbox")
+const outer_div = document.getElementById("form_for_delivery_information_outer_div")
+const checkout_button = document.getElementsByClassName("sidebar_inner_div_2_inner_button_2")
+const  checkout_button2 = document.getElementsByClassName("bottom_div_inner_button_2_inner_div")
+const Continue_shopping = document.getElementById("Continue_shopping")
+// const customer_last_name = document.getElementById("customer_last_name")
+// const customer_first_name = document.getElementById("customer_first_name")
+// const customer_name = document.getElementById("customer_name")
+const customer_tel_number = document.getElementById("customer_tel_number")
+const form_for_delivery_information = document.getElementById("form_for_delivery_information")
+const send_order_form = document.getElementById("send_order_form");
+const place_order = document.getElementById("place_order")
+const Store_owner_id = document.getElementsByClassName("Store_owner_id") 
+//const fourSquare = document.getElementsByClassName("fourSquare");
+const event = new Event('click', { bubbles: true });
+const sidebar_inner_div_2_inner_button_1 = document.getElementsByClassName("sidebar_inner_div_2_inner_button_1")
+const all_stores = document.getElementById("all_stores")
+const bottom_div_inner_button_3 = document.getElementsByClassName("bottom_div_inner_button_3")
+const Store_link = document.getElementsByClassName("Store_link")
+const Store_link_id = document.getElementsByClassName("Store_link_id");
+const Close_Store_Profile = document.getElementsByClassName("Close_Store_Profile");
+
+
+
+// const socket = io()
+//socket.emit("NewClient");
+// socket.on("triggerEvent",()=>{
+//     for(let i = 0; i < fourSquare.length; i++){
+//         fourSquare[i].dispatchEvent(event)
+//     }
+
+// })
+// let customer_full_name = customer_last_name.value + " " + customer_first_name;
+// customer_name.value = customer_full_name;
+
+
+for(let i = 0; i < myArray.length;i++){
+    myArray[i] = 0;
+}
+
+
+for(let i = 0; i < product_increment_button.length; i++){
+       product_increment_button[i].addEventListener("click",()=>{
+        let holder = selected_product_amount_div[i].innerHTML;
+        holder = Number(holder);
+        selected_product_amount_div[i].innerHTML = holder + 1;
+       
+    })
+}
+
+for(let i = 0; i < product_decrement_button.length; i++){
+    product_decrement_button[i].addEventListener("click",()=>{
+        let holder =Number( selected_product_amount_div[i].innerHTML);
+        if(holder > 0){
+            selected_product_amount_div[i].innerHTML = holder - 1;  
+        }
+    
+    })
+}
+
+for(let i = 0; i < add_to_cart_buttons.length; i++){
+
+    add_to_cart_buttons[i].addEventListener("click",()=>{
+
+   
+         let number = Number(selected_product_amount_div[i].innerHTML);
+        if(number > 0){
+      let holder1 = Number(selected_product_amount_div[i].innerHTML);
+
+      //for increasing amount of cart items
+      let holder2 = Number(amount_of_cart_items[0].innerHTML);
+      holder2 = holder2 + holder1;
+      amount_of_cart_items[0].innerHTML = holder2;
+    //End of increasing amount of cart items
+
+
+      // for increasing checking out price
+      let holder3 = Number(product_price[i].innerHTML);
+      holder4 = holder3 * holder1;
+      let holder5 = Number(ab[0].innerHTML);
+      ab[0].innerHTML = holder5 + holder4;
+      ab[1].innerHTML = holder5 + holder4;
+       //End of increasing checking out price
+
+       //Start of adding selecteg goods to the sidebar
+       const sidebar_store_owner_id  = document.createElement("div")
+       sidebar_store_owner_id.className = "sidebar_store_owner_id"
+       sidebar_store_owner_id.innerHTML = Store_owner_id[i].innerHTML
+       sidebar_store_owner_id.style.display = "none"
+    
+       const xyz = document.createElement("div")
+       xyz.className = "sidebar_inner_div_1_inner_divs"
+
+       const xyza = document.createElement("div")
+       xyza.className = "A"
+       xyza.innerHTML = selected_product_amount_div[i].innerHTML
+
+       const xyzb = document.createElement("div")
+       xyzb.className = "B"
+       xyzb.innerHTML = product_name[i].innerHTML;
+
+       const span = document.createElement("span")
+       span.className = "span"
+       span.innerHTML = "#"
+
+       const xyzc = document.createElement("div")
+       xyzc.className = "C"
+       xyzc.innerHTML = Number(product_price[i].innerHTML) * Number(selected_product_amount_div[i].innerHTML)
+
+    
+
+       const xyzd = document.createElement("button")
+       xyzd.className = "D"
+       xyzd.innerHTML = "Remove from cart"
+
+       const fourSquare = document.createElement("button")
+       fourSquare.classList = "fourSquare"
+       //fourSquare.style.display = "none"
+       xyz.append(sidebar_store_owner_id)
+       xyz.append(xyza)      
+       xyz.append(xyzb)  
+       xyz.append(span)  
+       xyz.append(xyzc)   
+       xyz.append(xyzd)  
+       xyz.append(fourSquare)
+
+       
+       sidebar_inner_div_1[0].append(xyz);
+
+   
+    xyzd.addEventListener("click",(event)=>{
+        let product_amount;
+        let product_price;
+        const parentElement =  sidebar_inner_div_1[0];
+        product_amount = event.target.parentNode.children[1].innerHTML
+        product_price = event.target.parentNode.children[4].innerHTML
+        let holder = Number(amount_of_cart_items[0].innerHTML) - Number(product_amount)
+        amount_of_cart_items[0].innerHTML = holder
+        let holder1 =Number(ab[0].innerHTML) - Number(product_price)
+        ab[0].innerHTML = holder1;
+        let holder2 =Number(ab[1].innerHTML) - Number(product_price)
+        ab[1].innerHTML = holder1;
+        
+        parentElement.removeChild(event.target.parentNode)
+    })
+
+    fourSquare.addEventListener("click",()=>{
+        const xhr = new XMLHttpRequest()
+               xhr.open("POST","/fourSquare",true)
+               xhr.setRequestHeader("Content-Type","application/JSON")
+               fourSquareObject = {product_amount:xyza.innerHTML, product_name:xyzb.innerHTML,product_price :xyzc.innerHTML,Store_owner_id:sidebar_store_owner_id.innerHTML}
+               xhr.send(JSON.stringify({
+                    fourSquareInfo: fourSquareObject
+               }))
+
+    })
+  
+      //End of adding selecteg goods to the sidebar
+
+      selected_product_amount_div[i].innerHTML = "0";
+        }
+
+    })
+}
+
+xyz_buttons[0].addEventListener("click",()=>{
+    sidebar[0].style.display = "block"
+    console.log(products_div[0].style)
+    
+})
+
+xyz_buttons[1].addEventListener("click",()=>{
+    sidebar[0].style.display = "none";
+})
+
+location_button.addEventListener("click",()=>{
+    location_list.style.display = "block"
+}
+)
+
+for(let i = 0 ; i < label.length; i++){
+    label[i].addEventListener("click",()=>{
+        location_button.value = label[i].innerHTML
+        location_list.style.display = "none"
+    })
+}
+
+for(let i = 0 ; i < checkbox.length; i++){
+    checkbox[i].addEventListener("click",()=>{
+        location_button.value = checkbox[i].value
+        location_list.style.display = "none"
+    })
+}
+
+
+checkout_button[0].addEventListener("click",()=>{
+    if(sidebar_inner_div_1[0].children.length > 0){
+        outer_div.style.display = "block"
+    }else{
+        window.alert("Add at least one product to your cart before you place orders")
+    }
+    
+})
+
+checkout_button2[0].addEventListener("click",()=>{
+    if(sidebar_inner_div_1[0].children.length > 0){
+        outer_div.style.display = "block"
+    }else{
+        window.alert("add at least one product to your cart to place order")
+    }
+})
+
+Continue_shopping.addEventListener("click",()=>{
+    outer_div.style.display = "none"
+
+})
+sidebar_inner_div_2_inner_button_1[0].addEventListener("click",()=>{
+    sidebar[0].style.display = "none"
+})
+
+bottom_div_inner_button_3[0].addEventListener("click",()=>{
+    all_stores.style.display = "block"
+})
+Close_Store_Profile[0].addEventListener("click",()=>{
+    all_stores.style.display = "none"
+})
+
+
+    </script>
+    </body>
+</html>
