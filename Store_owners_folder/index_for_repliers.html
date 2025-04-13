@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        #main_div{
+    width:100%;
+    background-color: rgba(218, 159, 13, 0.349);
+}
+
+.main_div_first_inner_div{
+    background-color: orgba(218, 159, 13, 0.349);
+    text-align: center;
+    font-family: Lucida Sans;
+    font-size: 50px;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.sign_up_form{
+    background-color: rgba(218, 159, 13, 0.349);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.sign_up_form_inner_input_element{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   width: 100%;
+   box-sizing: border-box;
+   padding: 10px;
+   margin-top: 2px;
+   margin-bottom: 7px;
+   border-radius: 20px;
+   
+}
+
+.sign_up_button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 2px;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(218, 159, 13, 0.349);
+
+   
+
+}
+      </style>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div class="main_div_first_inner_div"> Sign up</div>
+            <form action="/sign_up" enctype="application/x-www-form-urlencoded" class="sign_up_form" method="post">
+                <input type="text" name="store_name" class="sign_up_form_inner_input_element" placeholder="Store name" required>
+                   <input type="text" name="first_name" class="sign_up_form_inner_input_element" placeholder="First name" required>
+                   <input type="text" name="last_name" class="sign_up_form_inner_input_element" placeholder="Last name"  required>
+                   <input type="email" name="email" class="sign_up_form_inner_input_element" placeholder="Email"  required>
+                   <input type="tel" name="phone_number" class="sign_up_form_inner_input_element" placeholder="Phone_number"  maxlength="11" minlength="11" required >
+                   <input type="password" name="password" class="sign_up_form_inner_input_element" min="6" placeholder="Password" required>
+                    <input type="submit" value="Sign up" class="sign_up_button" >
+                    
+            </form>
+            <form action="/Already_have_an_account" method="post">
+                <input class="sign_up_button" id="x" type="submit" value="Already have an account? Login.">
+            </form>
+        </div>
+
+    </body>
+</html>

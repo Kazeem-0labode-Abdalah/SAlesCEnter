@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            #h31{
+                text-align: center;
+                font-family: monospace;
+                font-size: 20px;
+            }
+
+            #span1{
+                text-align: center;
+                font-family: monospace;
+                font-size: 20px;
+                color: orange;
+            }
+
+            .Order_div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                border: 2px solid orange;
+                border-radius: 5px;
+                flex-wrap: wrap;
+                margin-bottom: 7px;
+            }
+
+            .Order_div div{
+                font-family: monospace;
+                font-size: 20px;
+                margin: 8px;
+            }
+
+            .Order_div button{
+                font-family: monospace;
+                font-size: 20px;
+                cursor: pointer;
+                color: black;
+                background-color: orange;
+                border-radius: 7px;
+                padding: 2px;
+            }
+            .order_id{
+                display: none;
+            }
+
+        
+            #sidebar_main_div{
+                 width: 100%; 
+                 padding: 5px;
+                 border-radius: 10px;
+                 top: 0px;
+                bottom: 0px; 
+                left: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                background-color: orange;
+            }
+
+            .sidebar_main_div_inner_button{
+                border: 2px solid black;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+         
+            .sidebar_main_div_inner_div_inner_p{
+                text-align: center;
+                font-family: monospace;
+                font-size: 20px;
+
+            }
+
+            .sidebar_main_div_inner_div_inner_img{
+                width: 70px;
+                border-radius: 5px;
+                
+
+            }
+
+            #upload_new_product_to_database_main_outer_div{
+                border: 2px solid black;
+                padding: 5px;
+                border-radius: 15px;
+                
+            }
+
+            #upload_new_product_to_database_image_element{
+                height: 25%;
+                width: 25%;
+                border-radius: 7px;
+            }
+            
+
+            #upload_new_product_to_database_form_element{
+                display: flex;
+                flex-direction: column;
+                /* width: 50%;
+                height: 50%;
+                left: 25%;
+                right: 25%; */
+            }
+
+            .upload_new_product_to_database_input_element{
+                margin-top:7px;
+                padding: 20px;
+                border: 2px solid orange;
+                border-radius: 25px;
+                font-size: 20px;
+                font-family: monospace  sans-serif;
+            }
+
+            .sidebar_main_div_inner_input{
+                color: black;
+                background-color: orange;
+                font-size: 16px;
+                font-family: monospace;
+                border-radius: 6px;
+                padding: 20px;
+                border: 1px solid black;
+            }
+
+
+            
+        </style>
+    </head>
+
+    <body class="body">
+        <div id="sidebar_main_div">
+            <div class="sidebar_main_div_inner_button">
+                <p class="sidebar_main_div_inner_div_inner_p">Upload Products</p>
+                <img src="upload.png" alt="" class = "sidebar_main_div_inner_div_inner_img">
+                <form action="/Upload_Products" method="get">
+                    <input type="submit" value="Click here to upload new Product" class="sidebar_main_div_inner_input">
+                </form>
+            </div>
+            <div class="sidebar_main_div_inner_button">
+                <p class="sidebar_main_div_inner_div_inner_p">Update Product's Info</p>
+                <img src="update.png" alt=""  class = "sidebar_main_div_inner_div_inner_img">
+                <form action="/Update_Products_information" method="get">
+                    <input type="submit" value="Click here to update product's info" class="sidebar_main_div_inner_input">
+                </form>
+            </div>
+            <div class="sidebar_main_div_inner_button">
+                <p class="sidebar_main_div_inner_div_inner_p">Placed Orders</p>
+                <img src="order.png" alt=""  class = "sidebar_main_div_inner_div_inner_img">
+                <form action="/Placed_orders" method="get">
+                    <input type="submit" value="Click here to view placed order" class="sidebar_main_div_inner_input">
+                </form>
+            </div>
+        </div>
+        
+
+
+        <h3 id="h31">Placed orders for <span id="span1"></span></h3>
+        <div class="outer_div">
+        <%for(let i = 0; i < order_holder.length ; i++){%>
+        <div class="Order_div">
+            <div class="order_id"><%=order_holder[i][0]%></div>
+            <div class="customer_name"><%=order_holder[i][1]%></div>
+            <div class="customer_email"><%=order_holder[i][2]%></div>
+            <div class="customer_tel_number"><%=order_holder[i][3]%></div>
+            <div class="customer_location"><%=order_holder[i][4]%></div>
+            <div class="product_amount"><%=order_holder[i][5]%></div>
+            <div class="product_name"><%=order_holder[i][6]%></div>
+            <div class="product_price">#<%=order_holder[i][7]%></div>
+            <!-- <div><button class="delivered_buttons">Delivered</button></div> -->
+        </div>
+        <%}%>
+        </div>
+
+        <script>
+            const body = document.getElementsByClassName("body")
+            const span1 = document.getElementById("span1")
+            const delivered_buttons = document.getElementsByClassName("delivered_buttons")
+            const order_id = document.getElementsByClassName("order_id")
+            const date = new Date()
+            const month = date.toLocaleDateString("default",{month: "long"})
+            let date_as_string = String(date.getDate())+ " " + month +" "+ String(date.getFullYear())
+            span1.innerHTML = date_as_string;
+
+
+            // for(let i = 0; i < delivered_buttons.length; i++){
+            //     delivered_buttons[i].addEventListener("click",(event)=>{
+            //    const xhr = new XMLHttpRequest()
+            //    xhr.open("POST","/Delivered_order",true)
+            //    xhr.setRequestHeader("Content-Type","application/JSON")
+            //    xhr.send(JSON.stringify({Order_id_number:order_id[i].innerHTML  ,                     
+            //    }))
+            //    delivered_buttons[i].style.color = "purple"
+            //     })
+                
+            // }
+        </script>
+    </body>
+</html>
